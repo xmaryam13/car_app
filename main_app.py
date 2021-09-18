@@ -26,7 +26,7 @@ def num_map(series):
 @st.cache()
 def load_data():
     # Reading the dataset
-    cars_df = pd.read_csv("C:/Users/MBajw/OneDrive/Documents/Coding/car-prices.csv")
+    cars_df = pd.read_csv("car-prices.csv")
     # Extract the name of the manufactures from the car names and display the first 25 cars to verify whether names are extracted successfully.
     car_companies = pd.Series([car.split(" ")[0] for car in cars_df['CarName']], index = cars_df.index)
     # Create a new column named 'car_company'. It should store the company names of a the cars.
